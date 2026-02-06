@@ -3,259 +3,427 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lintech Group - Fashion</title>
+  <title>Lintech Fashion - Premium Styles</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- Header -->
 <header class="header">
   <div class="container">
-    <div class="logo">Lintech Group</div>
-    <nav class="nav">
+    <div class="logo">Lintech Fashion</div>
+
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav-menu">
       <a href="#home">Home</a>
       <a href="#featured">Featured</a>
       <a href="#categories">Categories</a>
-      <a href="#prices">Prices</a>
+      <a href="#new-arrivals">New Arrivals</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <!-- Cart -->
+    <div class="cart-icon" id="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </div>
   </div>
 </header>
 
-<!-- HERO - Very impressive first view -->
+<!-- Hero -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="container hero-content">
-    <div class="hero-text">
-      <h1>Elevate Your <br> Everyday Style</h1>
-      <p>Premium fashion with perfect fit and honest prices. Discover your signature look today.</p>
-      <button class="btn primary" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'});">Explore Now</button>
+    <h1>Discover Premium Fashion</h1>
+    <p>Latest trends, high quality, unbeatable prices. Shop now!</p>
+    <button class="btn primary" id="shop-now-btn">Shop Now</button>
+  </div>
+</section>
+
+<!-- Featured -->
+<section class="section" id="featured">
+  <div class="container">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&auto=format&fit=crop" alt="Stylish Jacket">
+        <h3>Stylish Jacket</h3>
+        <p class="price">$99.99</p>
+        <button class="btn add-to-cart" data-name="Stylish Jacket" data-price="99.99">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop" alt="Casual Tee">
+        <h3>Casual Tee</h3>
+        <p class="price">$29.99</p>
+        <button class="btn add-to-cart" data-name="Casual Tee" data-price="29.99">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=500&auto=format&fit=crop" alt="Cozy Hoodie">
+        <h3>Cozy Hoodie</h3>
+        <p class="price">$49.99</p>
+        <button class="btn add-to-cart" data-name="Cozy Hoodie" data-price="49.99">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop" alt="Performance Sneakers">
+        <h3>Performance Sneakers</h3>
+        <p class="price">$79.99</p>
+        <button class="btn add-to-cart" data-name="Performance Sneakers" data-price="79.99">Add to Cart</button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURED -->
-<section class="featured" id="featured">
+<!-- Categories -->
+<section class="section" id="categories">
   <div class="container">
-    <h2>Featured Picks</h2>
-    <div class="featured-grid">
-      <div class="featured-item">
-        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=800&auto=format&fit=crop" alt="Elegant Model">
-        <p>Elegant Coat</p>
-        <span class="price">$129.99</span>
-        <button class="btn">Add to Cart</button>
-      </div>
-      <div class="featured-item">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&auto=format&fit=crop" alt="Graphic Tee Model">
-        <p>Graphic Tee</p>
-        <span class="price">$29.99</span>
-        <button class="btn">Add to Cart</button>
-      </div>
-      <div class="featured-item">
-        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=800&auto=format&fit=crop" alt="Hoodie Model">
-        <p>Cozy Hoodie</p>
-        <span class="price">$59.99</span>
-        <button class="btn">Add to Cart</button>
-      </div>
-      <div class="featured-item">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop" alt="Red Sneakers">
-        <p>Performance Sneakers</p>
-        <span class="price">$89.99</span>
-        <button class="btn">Add to Cart</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CATEGORIES -->
-<section class="categories" id="categories">
-  <div class="container">
-    <h2>Shop by Category</h2>
+    <h2>Categories</h2>
     <div class="category-grid">
       <a href="#hoodies-products" class="category-item">
         <div class="category-circle">
           <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=300&auto=format&fit=crop" alt="Hoodies">
         </div>
         <p>Hoodies</p>
-        <span class="price-range">From $39.99</span>
       </a>
       <a href="#jackets-products" class="category-item">
         <div class="category-circle">
           <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=300&auto=format&fit=crop" alt="Jackets">
         </div>
         <p>Jackets</p>
-        <span class="price-range">From $69.99</span>
       </a>
       <a href="#tshirts-products" class="category-item">
         <div class="category-circle">
           <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&auto=format&fit=crop" alt="T-Shirts">
         </div>
         <p>T-Shirts</p>
-        <span class="price-range">From $19.99</span>
       </a>
       <a href="#shoes-products" class="category-item">
         <div class="category-circle">
           <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&auto=format&fit=crop" alt="Shoes">
         </div>
         <p>Shoes</p>
-        <span class="price-range">From $59.99</span>
       </a>
     </div>
   </div>
 </section>
 
 <!-- Hoodies Products -->
-<section id="hoodies-products" class="product-section">
+<section class="section" id="hoodies-products">
   <div class="container">
-    <h2>Hoodies Collection</h2>
+    <h2>Hoodies</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&auto=format&fit=crop" alt="Classic Hoodie">
-        <p>Classic Hoodie</p>
-        <span class="price">$45.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&auto=format&fit=crop" alt="Classic Black Hoodie">
+        <h3>Classic Black Hoodie</h3>
+        <p class="price">$45.99</p>
+        <button class="btn add-to-cart" data-name="Classic Black Hoodie" data-price="45.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=500&auto=format&fit=crop" alt="Oversized Hoodie">
-        <p>Oversized Hoodie</p>
-        <span class="price">$55.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=500&auto=format&fit=crop" alt="Oversized Gray Hoodie">
+        <h3>Oversized Gray Hoodie</h3>
+        <p class="price">$55.99</p>
+        <button class="btn add-to-cart" data-name="Oversized Gray Hoodie" data-price="55.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop" alt="Printed Hoodie">
-        <p>Printed Hoodie</p>
-        <span class="price">$49.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop" alt="Printed Street Hoodie">
+        <h3>Printed Street Hoodie</h3>
+        <p class="price">$49.99</p>
+        <button class="btn add-to-cart" data-name="Printed Street Hoodie" data-price="49.99">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&auto=format&fit=crop" alt="Blue Zip Hoodie">
+        <h3>Blue Zip Hoodie</h3>
+        <p class="price">$59.99</p>
+        <button class="btn add-to-cart" data-name="Blue Zip Hoodie" data-price="59.99">Add to Cart</button>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Jackets Products -->
-<section id="jackets-products" class="product-section">
+<section class="section" id="jackets-products">
   <div class="container">
-    <h2>Jackets Collection</h2>
+    <h2>Jackets</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=500&auto=format&fit=crop" alt="Leather Jacket">
-        <p>Leather Jacket</p>
-        <span class="price">$99.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=500&auto=format&fit=crop" alt="Leather Bomber">
+        <h3>Leather Bomber Jacket</h3>
+        <p class="price">$99.99</p>
+        <button class="btn add-to-cart" data-name="Leather Bomber Jacket" data-price="99.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop" alt="Bomber Jacket">
-        <p>Bomber Jacket</p>
-        <span class="price">$89.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop" alt="Denim Trucker">
+        <h3>Denim Trucker Jacket</h3>
+        <p class="price">$79.99</p>
+        <button class="btn add-to-cart" data-name="Denim Trucker Jacket" data-price="79.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&auto=format&fit=crop" alt="Denim Jacket">
-        <p>Denim Jacket</p>
-        <span class="price">$79.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&auto=format&fit=crop" alt="Windbreaker">
+        <h3>Windbreaker Jacket</h3>
+        <p class="price">$69.99</p>
+        <button class="btn add-to-cart" data-name="Windbreaker Jacket" data-price="69.99">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&auto=format&fit=crop" alt="Winter Puffer">
+        <h3>Winter Puffer Jacket</h3>
+        <p class="price">$119.99</p>
+        <button class="btn add-to-cart" data-name="Winter Puffer Jacket" data-price="119.99">Add to Cart</button>
       </div>
     </div>
   </div>
 </section>
 
 <!-- T-Shirts Products -->
-<section id="tshirts-products" class="product-section">
+<section class="section" id="tshirts-products">
   <div class="container">
-    <h2>T-Shirts Collection</h2>
+    <h2>T-Shirts</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop" alt="Basic Tee">
-        <p>Basic Tee</p>
-        <span class="price">$24.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop" alt="Basic White Tee">
+        <h3>Basic White Tee</h3>
+        <p class="price">$24.99</p>
+        <button class="btn add-to-cart" data-name="Basic White Tee" data-price="24.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=500&auto=format&fit=crop" alt="Graphic Tee">
-        <p>Graphic Tee</p>
-        <span class="price">$29.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=500&auto=format&fit=crop" alt="Graphic Print Tee">
+        <h3>Graphic Print Tee</h3>
+        <p class="price">$29.99</p>
+        <button class="btn add-to-cart" data-name="Graphic Print Tee" data-price="29.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&auto=format&fit=crop" alt="Oversized Tee">
-        <p>Oversized Tee</p>
-        <span class="price">$34.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&auto=format&fit=crop" alt="Oversized Black Tee">
+        <h3>Oversized Black Tee</h3>
+        <p class="price">$34.99</p>
+        <button class="btn add-to-cart" data-name="Oversized Black Tee" data-price="34.99">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop" alt="V-Neck Casual Tee">
+        <h3>V-Neck Casual Tee</h3>
+        <p class="price">$27.99</p>
+        <button class="btn add-to-cart" data-name="V-Neck Casual Tee" data-price="27.99">Add to Cart</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Shoes Products – FIXED gray shoe image -->
-<section id="shoes-products" class="product-section">
+<!-- Shoes Products - REMOVED GRAY TRAIL SHOE -->
+<section class="section" id="shoes-products">
   <div class="container">
-    <h2>Shoes Collection</h2>
+    <h2>Shoes</h2>
     <div class="product-grid">
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop" alt="Red Performance Sneakers">
-        <p>Red Performance Sneakers</p>
-        <span class="price">$89.99</span>
-        <button class="btn small">Add to Cart</button>
+        <h3>Red Performance Sneakers</h3>
+        <p class="price">$89.99</p>
+        <button class="btn add-to-cart" data-name="Red Performance Sneakers" data-price="89.99">Add to Cart</button>
       </div>
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1597892657493-6847b9640bac?w=500&auto=format&fit=crop" alt="White Classic Runners">
-        <p>White Classic Runners</p>
-        <span class="price">$79.99</span>
-        <button class="btn small">Add to Cart</button>
+        <h3>White Classic Runners</h3>
+        <p class="price">$79.99</p>
+        <button class="btn add-to-cart" data-name="White Classic Runners" data-price="79.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gray Trail Running Shoes">
-        <p>Gray Trail Running Shoes</p>
-        <span class="price">$69.99</span>
-        <button class="btn small">Add to Cart</button>
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&auto=format&fit=crop" alt="Black Casual Sneakers">
+        <h3>Black Casual Sneakers</h3>
+        <p class="price">$75.99</p>
+        <button class="btn add-to-cart" data-name="Black Casual Sneakers" data-price="75.99">Add to Cart</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICES -->
-<section class="prices" id="prices">
+<!-- New Arrivals - REMOVED GRAY TRAIL SHOE -->
+<section class="section" id="new-arrivals">
   <div class="container">
-    <h2>Pricing Plans</h2>
-    <div class="prices-grid">
-      <div class="price-card">
-        <h3>Everyday Wear</h3>
-        <p class="price">$19.99 – $59.99</p>
-        <button class="btn">Shop Now</button>
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop" alt="Red Performance Sneakers">
+        <h3>Red Performance Sneakers</h3>
+        <p class="price">$89.99</p>
+        <button class="btn add-to-cart" data-name="Red Performance Sneakers" data-price="89.99">Add to Cart</button>
       </div>
-      <div class="price-card highlight">
-        <h3>Premium Range</h3>
-        <p class="price">$69.99 – $129.99</p>
-        <button class="btn primary">Shop Premium</button>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1597892657493-6847b9640bac?w=500&auto=format&fit=crop" alt="White Classic Runners">
+        <h3>White Classic Runners</h3>
+        <p class="price">$79.99</p>
+        <button class="btn add-to-cart" data-name="White Classic Runners" data-price="79.99">Add to Cart</button>
       </div>
-      <div class="price-card">
-        <h3>Luxury Edit</h3>
-        <p class="price">$149.99+</p>
-        <button class="btn">Shop Luxury</button>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&auto=format&fit=crop" alt="Black Casual Sneakers">
+        <h3>Black Casual Sneakers</h3>
+        <p class="price">$75.99</p>
+        <button class="btn add-to-cart" data-name="Black Casual Sneakers" data-price="75.99">Add to Cart</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
+<!-- Contact -->
+<section class="section" id="contact">
   <div class="container">
-    <h2>Get in Touch</h2>
-    <p>Questions or custom orders? We'd love to hear from you.</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit" class="btn primary">Send Message</button>
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button class="btn primary" type="submit">Send Message</button>
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 Lintech Group. All rights reserved. | Mysuru, Karnataka</p>
+<!-- Cart Modal -->
+<div class="modal" id="cart-modal">
+  <div class="modal-content">
+    <span class="close" id="close-cart">×</span>
+    <h2>Shopping Cart</h2>
+    <div id="cart-items"></div>
+    <p>Total: <span id="cart-total">$0.00</span></p>
+    <button class="btn primary" id="place-order">Place Order</button>
   </div>
-</footer>
+</div>
+
+<!-- Order Details Modal -->
+<div class="modal" id="order-details-modal">
+  <div class="modal-content">
+    <span class="close" id="close-order-details">×</span>
+    <h2>Enter Your Details</h2>
+    <form id="order-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Phone Number" required>
+      <input type="text" placeholder="Delivery Address" required>
+      <button class="btn primary" type="submit">Continue to Payment</button>
+    </form>
+  </div>
+</div>
+
+<!-- Payment Modal -->
+<div class="modal" id="payment-modal">
+  <div class="modal-content">
+    <span class="close" id="close-payment">×</span>
+    <h2>Payment Details</h2>
+    <form id="payment-form">
+      <input type="text" placeholder="Card Number" required>
+      <input type="text" placeholder="MM/YY" required>
+      <input type="text" placeholder="CVV" required>
+      <button class="btn primary" type="submit">Pay & Place Order</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal" id="success-modal">
+  <div class="modal-content">
+    <h2>Success!</h2>
+    <p>Your order has been placed. Thank you for shopping!</p>
+    <button class="btn primary" id="close-success">OK</button>
+  </div>
+</div>
+
+<script>
+// Cart array
+let cart = [];
+const cartCount = document.getElementById('cart-count');
+const cartModal = document.getElementById('cart-modal');
+const orderDetailsModal = document.getElementById('order-details-modal');
+const paymentModal = document.getElementById('payment-modal');
+const successModal = document.getElementById('success-modal');
+const cartItems = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+
+// Add to Cart
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', () => {
+    const name = button.dataset.name;
+    const price = parseFloat(button.dataset.price);
+    cart.push({ name, price });
+    updateCart();
+    alert(name + ' added to cart');
+  });
+});
+
+// Update cart display
+function updateCart() {
+  cartCount.textContent = cart.length;
+  cartItems.innerHTML = '';
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price;
+    const div = document.createElement('div');
+    div.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    cartItems.appendChild(div);
+  });
+  cartTotal.textContent = `$${total.toFixed(2)}`;
+}
+
+// Open Cart
+document.getElementById('cart-icon').addEventListener('click', () => {
+  cartModal.style.display = 'block';
+});
+
+// Close Cart
+document.getElementById('close-cart').addEventListener('click', () => {
+  cartModal.style.display = 'none';
+});
+
+// Place Order - check if cart is empty
+document.getElementById('place-order').addEventListener('click', () => {
+  if (cart.length === 0) {
+    alert('Please add items to cart first!');
+    return;
+  }
+  cartModal.style.display = 'none';
+  orderDetailsModal.style.display = 'block';
+});
+
+// Order Details Submit
+document.getElementById('order-form').addEventListener('submit', e => {
+  e.preventDefault();
+  orderDetailsModal.style.display = 'none';
+  paymentModal.style.display = 'block';
+});
+
+// Payment Submit
+document.getElementById('payment-form').addEventListener('submit', e => {
+  e.preventDefault();
+  paymentModal.style.display = 'none';
+  successModal.style.display = 'block';
+  cart = [];
+  updateCart();
+});
+
+// Close Success
+document.getElementById('close-success').addEventListener('click', () => {
+  successModal.style.display = 'none';
+});
+
+// Close Modals on Outside Click
+window.addEventListener('click', e => {
+  if (e.target === cartModal) cartModal.style.display = 'none';
+  if (e.target === orderDetailsModal) orderDetailsModal.style.display = 'none';
+  if (e.target === paymentModal) paymentModal.style.display = 'none';
+  if (e.target === successModal) successModal.style.display = 'none';
+});
+
+// Shop Now
+document.getElementById('shop-now-btn').addEventListener('click', () => {
+  document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Contact Form Submit
+document.getElementById('contact-form').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Message sent successfully!');
+  e.target.reset();
+});
+</script>
 
 </body>
 </html>
